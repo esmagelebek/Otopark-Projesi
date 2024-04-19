@@ -1,4 +1,4 @@
-public class acikotopark implements otopark{
+public class acikotopark extends Otopark{
     private static acikotopark instance;
 
     public static acikotopark getInstance(){
@@ -6,16 +6,11 @@ public class acikotopark implements otopark{
             synchronized (acikotopark.class){
                 if (instance==null){
                     System.out.println("getInstance():getInstance" +
-                            "ilk kez çağrıldı!");
+                            " ilk kez çağrıldı!");
                     instance=new acikotopark();
                 }
             }
         }
         return instance;
-    }
-
-    @Override
-    public void otoparkTuru(User user) {
-        System.out.println("Açık otoparka girildi");
     }
 }

@@ -3,14 +3,11 @@ import java.util.Scanner;
 public class isletmesahibi {
     private static isletmesahibi instance;
     Scanner scanner=new Scanner(System.in);
-    public isletmesahibi() {
-    }
-
     public static isletmesahibi getInstance() {
         if (instance == null) {
             synchronized(isletmesahibi.class) {
                 if (instance == null) {
-                    System.out.println("getInstance():getInstanceilk kez çağrıldı!");
+                    System.out.println("getInstance():getInstance ilk kez çağrıldı!");
                     instance = new isletmesahibi();
                 }
             }

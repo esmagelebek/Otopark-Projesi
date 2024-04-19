@@ -1,4 +1,4 @@
-public class kapaliOtopark implements otopark{
+public class kapaliOtopark extends Otopark{
     private static kapaliOtopark instance;
 
     public static kapaliOtopark getInstance(){
@@ -6,7 +6,7 @@ public class kapaliOtopark implements otopark{
             synchronized (kapaliOtopark.class){
                 if (instance==null){
                     System.out.println("getInstance():getInstance" +
-                            "ilk kez çağrıldı!");
+                            " ilk kez çağrıldı!");
                     instance=new kapaliOtopark();
                 }
             }
@@ -14,8 +14,4 @@ public class kapaliOtopark implements otopark{
         return instance;
     }
 
-    @Override
-    public void otoparkTuru(User user) {
-        System.out.println("Kapalı otoparka girildi");
-    }
 }

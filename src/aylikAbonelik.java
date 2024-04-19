@@ -19,7 +19,10 @@ public class aylikAbonelik implements abonelik {
         soyad=scanner.next();
         System.out.println("Plaka No :");
         plakaNo=scanner.next();
-        this.user=new User.UserBuilder(ad,soyad,plakaNo,"aylık").build();
+        this.user=new User.UserBuilder(ad,soyad,plakaNo,"aylık")
+                .telefonNumarasi("+905433211221")
+                .tcNo(23134454)
+                .build();
         List<User> liste=new ArrayList<>();
         liste.add(this.user);
         return this;

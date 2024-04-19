@@ -1,24 +1,15 @@
 import java.util.Scanner;
 
-public class test {
-
-
-
-
-
+public class Test extends Otopark {
     public static void main(String[] args) {
         abonelikTercihiFactory abonelikTercihi=new abonelikTercihiFactory();
-        otoparkFactory OtoparkFactory=new otoparkFactory();
         kullaniciIslemleri kullaniciIslemi=new kullaniciIslemleri();
         Scanner scanner=new Scanner(System.in);
-
         System.out.println("Kullanıcı adınızı giriniz : ");
         String kullaniciAdi=scanner.next();
         System.out.println("Şifrenizi giriniz : ");
         String sifre= scanner.next();
-
-
-       if (kullaniciAdi.equals(kullaniciIslemi.getKayitliKullaniciadi()) || sifre.equals(kullaniciIslemi.getKayitliSifre())) {
+        if (kullaniciAdi.equals(kullaniciIslemi.getKayitliKullaniciadi()) || sifre.equals(kullaniciIslemi.getKayitliSifre())) {
            System.out.println("Sisteme başarıyla giriş yaptınız.Tebrikler:))");
            System.out.println("sisteme giriş tipinizi seciniz(müşteri,işletme sahibi,muhasebeci,güvenlik görevlisi,müdür)");
            String girisTipi = "";
@@ -40,7 +31,10 @@ public class test {
                } else if (islem.equals("odemegecmisigoruntule")) {
                    abonelikTercihi.odemeGecmisiGoruntule();
                } else if (islem.equals("otoparkturu")) {
-                   OtoparkFactory.otoparkTuru();
+                  Test test=new Test();
+                  System.out.println("Hangi otoparka girmek istersiniz");
+                  String otoparkTuru= scanner.next();
+                  test.otoparkTuru(otoparkTuru);
 
            }else
                    System.out.println("hata");
