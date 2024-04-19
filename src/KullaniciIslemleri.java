@@ -1,19 +1,17 @@
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class kullaniciIslemleri {
+public class KullaniciIslemleri {
 
     Scanner scanner=new Scanner(System.in);
     private String kayitliKullaniciadi="esma";
     private String kayitliSifre="123456";
     private List<User> aboneler;
 
-    ArrayList<String> oneriListesi=new ArrayList<>();
-    ArrayList<String> sikayetListesi=new ArrayList<>();
+    List<String> oneriListesi=new ArrayList<>();
+    List<String> sikayetListesi=new ArrayList<>();
         public String getKayitliKullaniciadi() {
             return kayitliKullaniciadi;
         }

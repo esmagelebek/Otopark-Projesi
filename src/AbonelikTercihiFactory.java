@@ -4,19 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class abonelikTercihiFactory {
+public class AbonelikTercihiFactory {
     private List<String> odemeGecmisi = new ArrayList<>();
-    kullaniciIslemleri kullaniciIslemleri=new kullaniciIslemleri();
+    KullaniciIslemleri kullaniciIslemleri=new KullaniciIslemleri();
 
-    public abonelik abonelikTercihi(){
-        String abonelikTürü;
+
+    public Abonelik abonelikTercihi(){
+        String abonelikTuru="";
         Scanner scanner=new Scanner(System.in);
         System.out.println("hangi abonelik türünü istiyorsunuz? (aylık or yıllık)");
-        abonelikTürü= scanner.next();
-        if (abonelikTürü.equals("aylık")) {
-            return new aylikAbonelik().abonelikTipi();
-        } else if (abonelikTürü.equals("yıllık")) {
-            return new yillikAbonelik().abonelikTipi();
+        abonelikTuru= scanner.next();
+        if (abonelikTuru.equals("aylık")) {
+            return new AylikAbonelik().abonelikTipi();
+        } else if (abonelikTuru.equals("yıllık")) {
+            return new YillikAbonelik().abonelikTipi();
         }else
             return null;
 

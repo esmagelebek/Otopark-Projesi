@@ -1,18 +1,15 @@
-import java.util.Scanner;
-
 public abstract class Otopark {
-    User user=new User.UserBuilder("Esma","Gelebek","34DES34","kapalı")
-            .tcNo(5263318).telefonNumarasi("+905432133212").build();
+
     public Otopark otoparkTuru(String otoparkTuru){
 
         if (otoparkTuru.equals("açık")){
-            acikotopark acikOtopark= acikotopark.getInstance();
+            Acikotopark acikOtopark= Acikotopark.getInstance();
             System.out.println("Açık otoparka girildi");
-            return new acikotopark();
+            return new Acikotopark();
         } else if (otoparkTuru.equals("kapalı")){
-            kapaliOtopark kapaliotopark=kapaliOtopark.getInstance();
+            KapaliOtopark kapaliotopark= KapaliOtopark.getInstance();
             System.out.println("Kapalı otoparka girildi");
-            return new kapaliOtopark();
+            return new KapaliOtopark();
         }else
             return null;
     }

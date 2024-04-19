@@ -1,15 +1,15 @@
 import java.util.Scanner;
 
-public class muhasebe {
-    private static muhasebe instance;
+public class Muhasebe {
+    private static Muhasebe instance;
 
-    public static muhasebe getInstance(){
+    public static Muhasebe getInstance(){
         if (instance==null){
-            synchronized (muhasebe.class){
+            synchronized (Muhasebe.class){
                 if (instance==null){
                     System.out.println("getInstance():getInstance" +
                             "ilk kez çağrıldı!");
-                    instance=new muhasebe();
+                    instance=new Muhasebe();
                 }
             }
         }

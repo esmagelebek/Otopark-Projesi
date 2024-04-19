@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class Test extends Otopark {
     public static void main(String[] args) {
-        abonelikTercihiFactory abonelikTercihi=new abonelikTercihiFactory();
-        kullaniciIslemleri kullaniciIslemi=new kullaniciIslemleri();
+        AbonelikTercihiFactory abonelikTercihi=new AbonelikTercihiFactory();
+        KullaniciIslemleri kullaniciIslemi=new KullaniciIslemleri();
         Scanner scanner=new Scanner(System.in);
         System.out.println("Kullanıcı adınızı giriniz : ");
         String kullaniciAdi=scanner.next();
@@ -20,7 +20,7 @@ public class Test extends Otopark {
                islem = scanner.next();
                if (islem.equals("öneri/şikayet")) {
                    kullaniciIslemi.oneriOrSikayet();
-               } else if (islem.equals("abonelik kaydı")) {
+               } else if (islem.equals("abonelikkaydı")) {
                    abonelikTercihi.abonelikTercihi();
                } else if (islem.equals("abonelikiptali")) {
                   kullaniciIslemi.abonelikIptali();
@@ -39,20 +39,21 @@ public class Test extends Otopark {
            }else
                    System.out.println("hata");
            }else if(girisTipi.equals("muhasebe")){
-               muhasebe Muhasebe=muhasebe.getInstance();
-               Muhasebe.odemePlani();
+               Muhasebe muhasebe= Muhasebe.getInstance();
+               muhasebe.odemePlani();
 
-           } else if (girisTipi.equals("işletme sahibi")) {
-               isletmesahibi isletmeSahibi=isletmesahibi.getInstance();
+           } else if (girisTipi.equals("işletmesahibi")) {
+               Isletmesahibi isletmeSahibi= Isletmesahibi.getInstance();
                System.out.println("Hangi işlemi yapmak istiyorsunuz?");
+               islem="";
                islem = scanner.next();
-               if(islem.equals("odeme planı")){
+               if(islem.equals("odemeplanı")){
                    isletmeSahibi.odemePlani();
-               } else if (islem.equals("müşteri takibi")) {
+               } else if (islem.equals("müşteritakibi")) {
                    isletmeSahibi.musteriTakibi();
-               } else if (islem.equals("öneri ve şikayet takibi")) {
+               } else if (islem.equals("öneriveşikayettakibi")) {
                    isletmeSahibi.oneriveSikayetTakibi();
-               } else if (islem.equals("aylık rapor")) {
+               } else if (islem.equals("aylıkrapor")) {
                    isletmeSahibi.aylikRapor();
                }
 
@@ -63,7 +64,7 @@ public class Test extends Otopark {
                islem = scanner.next();
                if (islem.equals("müşteritakibi")) {
                    mudur.musteriTakibi();
-               } else if (islem.equals("öneri ve şikayet takibi")) {
+               } else if (islem.equals("öneriveşikayettakibi")) {
                    mudur.oneriveSikayetTakibi();
                } else {
                    mudur.aylikRapor();

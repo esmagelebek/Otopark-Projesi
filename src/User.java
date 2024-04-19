@@ -11,6 +11,7 @@ public class User {
     private final String telefonNumarasi;
 
     private final String emailAdres;
+    private final String abonelikTercihi;
 
     public String getAd() {
         return ad;
@@ -44,7 +45,7 @@ public class User {
         return abonelikTercihi;
     }
 
-    private final String abonelikTercihi;
+
 
     private User(UserBuilder builder){
         this.ad=builder.ad;

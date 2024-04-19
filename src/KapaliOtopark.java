@@ -1,16 +1,17 @@
-public class acikotopark extends Otopark{
-    private static acikotopark instance;
+public class KapaliOtopark extends Otopark{
+    private static KapaliOtopark instance;
 
-    public static acikotopark getInstance(){
+    public static KapaliOtopark getInstance(){
         if (instance==null){
-            synchronized (acikotopark.class){
+            synchronized (KapaliOtopark.class){
                 if (instance==null){
                     System.out.println("getInstance():getInstance" +
                             " ilk kez çağrıldı!");
-                    instance=new acikotopark();
+                    instance=new KapaliOtopark();
                 }
             }
         }
         return instance;
     }
+
 }
