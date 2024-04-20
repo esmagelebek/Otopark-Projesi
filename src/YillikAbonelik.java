@@ -19,7 +19,7 @@ public class YillikAbonelik implements Abonelik {
         System.out.println("Plaka No :");
         plakaNo=scanner.next();
         this.user=new User.UserBuilder(ad,soyad,plakaNo,"yıllık").build();
-
+        System.out.println(user.getAd()+" "+user.getSoyad()+" "+user.getPlakaNo()+" "+user.getAbonelikTercihi());
         liste.add(user);
         return this;
     }

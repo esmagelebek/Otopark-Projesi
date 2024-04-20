@@ -91,9 +91,10 @@ public static class UserBuilder{
     public User build(){
         if(ad==null || soyad==null || plakaNo==null || abonelikTercihi==null){
             throw new IllegalStateException("Ad,soyad,plaka no ve abonelik tercihi zorunludur!!!!!");
-        }else
+        }else {
+            System.out.println("User oluşturuldu");
             return new User(this);
-
+        }
     }
 }
 }

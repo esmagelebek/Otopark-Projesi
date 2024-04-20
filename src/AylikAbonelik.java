@@ -23,7 +23,8 @@ public class AylikAbonelik implements Abonelik {
                 .telefonNumarasi("+905433211221")
                 .tcNo(23134454)
                 .build();
-
+        System.out.println(user.getAd()+" "+user.getSoyad()+" "+user.getPlakaNo()+" "+user.getAbonelikTercihi()
+                +" "+user.getTelefonNumarasi()+" "+user.getTcNo());
         liste.add(this.user);
         return this;
     }
